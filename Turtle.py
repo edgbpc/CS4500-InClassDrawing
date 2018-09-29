@@ -5,6 +5,7 @@ import turtle
 
 def colorNode(currentLocation):
 
+    # row 1
     if currentLocation == 1:
         # change color of triangle 1
         rowOneTriangles.penup()
@@ -21,17 +22,156 @@ def colorNode(currentLocation):
         rowOneTriangles.left(120)
         rowOneTriangles.forward(50)
         rowOneTriangles.end_fill()
+    # row 2
+    if currentLocation == 2:
+        rowTwoTriangles.penup()
+        rowTwoTriangles.goto(-200, 173)
+        rowTwoTriangles.left(60)
+        # rowOneTriangles.forward(250)
+        rowTwoTriangles.fillcolor('blue')
+        rowTwoTriangles.begin_fill()
+        rowTwoTriangles.pendown()
+        rowTwoTriangles.right(60)
+        rowTwoTriangles.forward(50)
+        rowTwoTriangles.left(120)
+        rowTwoTriangles.forward(50)
+        rowTwoTriangles.left(120)
+        rowTwoTriangles.forward(50)
+        rowTwoTriangles.end_fill()
+        rowTwoTriangles.penup()
 
-    if 2 <= currentLocation <= 3:
-        print(2)
+    if currentLocation == 3:
+        rowTwoTriangles.penup()
+        rowTwoTriangles.home()
+        rowTwoTriangles.goto(-150, 173)
+        rowTwoTriangles.left(60)
+        # rowOneTriangles.forward(250)
+        rowTwoTriangles.fillcolor('blue')
+        rowTwoTriangles.begin_fill()
+        rowTwoTriangles.pendown()
+        rowTwoTriangles.right(60)
+        rowTwoTriangles.forward(50)
+        rowTwoTriangles.left(120)
+        rowTwoTriangles.forward(50)
+        rowTwoTriangles.left(120)
+        rowTwoTriangles.forward(50)
+        rowTwoTriangles.end_fill()
+        rowTwoTriangles.penup()
+
+
+    # row 3
     if 4 <= currentLocation <= 6:
-        print(3)
+        rowThreeTriangles.penup()
+        rowThreeTriangles.home()
+        rowThreeTriangles.goto(-225, 129)
+        rowThreeTriangles.left(60)
+        # rowOneTriangles.forward(250)
+        rowThreeTriangles.fillcolor('blue')
+        rowThreeTriangles.begin_fill()
+        rowThreeTriangles.pendown()
+        rowThreeTriangles.right(60)
+
+        if currentLocation == 4:
+            rowThreeTriangles.forward(50)
+
+        if currentLocation == 5:
+            rowThreeTriangles.forward(100)
+
+        if currentLocation == 6:
+            rowThreeTriangles.forward(150)
+
+        rowThreeTriangles.left(120)
+        rowThreeTriangles.forward(50)
+        rowThreeTriangles.left(120)
+        rowThreeTriangles.forward(50)
+        rowThreeTriangles.end_fill()
+
+    # row 4
     if 7 <= currentLocation <= 10:
-        print(4)
+        rowFourTriangles.penup()
+        rowFourTriangles.home()
+        rowFourTriangles.goto(-250, 88)
+        rowFourTriangles.left(60)
+        # rowOneTriangles.forward(250)
+        rowFourTriangles.fillcolor('blue')
+        rowFourTriangles.begin_fill()
+        rowFourTriangles.pendown()
+        rowFourTriangles.right(60)
+
+        if currentLocation == 7:
+            rowFourTriangles.forward(50)
+        if currentLocation == 8:
+            rowFourTriangles.forward(100)
+        if currentLocation == 9:
+            rowFourTriangles.forward(150)
+        if currentLocation == 10:
+            rowFourTriangles.forward(200)
+
+        rowFourTriangles.left(120)
+        rowFourTriangles.forward(50)
+        rowFourTriangles.left(120)
+        rowFourTriangles.forward(50)
+        rowFourTriangles.end_fill()
+
+    # row 5
     if 11 <= currentLocation <= 15:
-        print(5)
+        rowFiveTriangles.penup()
+        rowFiveTriangles.home()
+        rowFiveTriangles.goto(-275, 44)
+        rowFiveTriangles.left(60)
+        # rowOneTriangles.forward(250)
+        rowFiveTriangles.fillcolor('blue')
+        rowFiveTriangles.begin_fill()
+        rowFiveTriangles.pendown()
+        rowFiveTriangles.right(60)
+
+        if currentLocation == 11:
+            rowFiveTriangles.forward(50)
+        if currentLocation == 12:
+            rowFiveTriangles.forward(100)
+        if currentLocation == 13:
+            rowFiveTriangles.forward(150)
+        if currentLocation == 14:
+            rowFiveTriangles.forward(200)
+        if currentLocation == 15:
+            rowFiveTriangles.forward(250)
+
+        rowFiveTriangles.left(120)
+        rowFiveTriangles.forward(50)
+        rowFiveTriangles.left(120)
+        rowFiveTriangles.forward(50)
+        rowFiveTriangles.end_fill()
+
+    # row 6
     if 16 <= currentLocation <= 21:
-        print(6)
+        rowSixTriangles.penup()
+        rowSixTriangles.home()
+        rowSixTriangles.goto(-300, 0)
+        rowSixTriangles.left(60)
+        # rowOneTriangles.forward(250)
+        rowSixTriangles.fillcolor('blue')
+        rowSixTriangles.begin_fill()
+        rowSixTriangles.pendown()
+        rowSixTriangles.right(60)
+
+        if currentLocation == 16:
+            rowSixTriangles.forward(50)
+        if currentLocation == 17:
+            rowSixTriangles.forward(100)
+        if currentLocation == 18:
+            rowSixTriangles.forward(150)
+        if currentLocation == 19:
+            rowSixTriangles.forward(200)
+        if currentLocation == 20:
+            rowSixTriangles.forward(250)
+        if currentLocation == 21:
+            rowSixTriangles.forward(300)
+
+        rowSixTriangles.left(120)
+        rowSixTriangles.forward(50)
+        rowSixTriangles.left(120)
+        rowSixTriangles.forward(50)
+        rowSixTriangles.end_fill()
 
 
 background = turtle.Turtle()
@@ -303,8 +443,9 @@ rowSixTriangles.end_fill()
 
 
 '''
-currentLocation = 1
-colorNode(currentLocation)
+for x in range(1, 22):
+    currentLocation = x
+    colorNode(currentLocation)
 
 
 turtle.done()
